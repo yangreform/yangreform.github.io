@@ -1,0 +1,54 @@
+//@version=6
+strategy("Alembert_inv", overlay=true) // 定義指標名稱並設置為覆蓋於價格圖表上
+
+// Inputs
+MaxOrder = input.int(20, "Max Order Count")  // 最大持倉數量，即最多可以開設的訂單數（默認設為20）
+Step = input.float(0.05, "Percentage")   // 下跌步幅比例，當價格向下移動超過此比例時進行新的一單（默認設為0.05）
+PF = input.float(0.005, "Profit Factor")      // 盈利目標比例，當價格上漲到達此比例時考慮平倉（默認設為0.005）
+
+
+// 變數定義
+var avgEntryPrices = array.new_float()      // 初始化一個空的浮動數組，用於存儲每次進場的價格
+var int currentOrders = 0                   // 初始化當前持倉的訂單數量
+
+// 計算進場價格的平均值
+avgPrice(arr) =>
+    sum = 0.0  // 初始化累加器
+    if array.size(arr) > 0  // 檢查數組是否有內容
+        for i = 0 to array.size(arr) - 1  // 遍歷數組中的所有元素
+            sum := sum + array.get(arr, i)  // 累加每次進場的價格
+        avg = sum / array.size(arr)  // 計算平均價格
+        avg
+    else
+        na  // 如果數組為空，返回na（無效值）
+
+// 賣空條件：當當前訂單為0且ADX值大於指定的門檻值，進行賣空
+if currentOrders == 0
+    label.new(bar_index, high, "Short 1", style=label.style_label_down, color=color.red)  // 在圖表上標註賣空信號
+    strategy.entry("sell", strategy.short)
+    array.push(avgEntryPrices, close)  // 將當前價格加入進場價格數組
+    currentOrders := currentOrders + 1  // 增加持倉數量
+
+// 計算所有進場價格的平均值
+avgEntryPrice = avgPrice(avgEntryPrices)  // 獲取所有進場價格的平均值
+
+// 在已有持倉的情況下，根據設定的條件賣空
+if currentOrders > 0 and currentOrders < MaxOrder
+    if close > avgEntryPrice * (1 + Step)  // 當當前價格比平均進場價格高出一定比例，觸發新的賣空
+        //label.new(bar_index, high, "Short " + str.tostring(currentOrders) + str.tostring(avgEntryPrices), style=label.style_label_down, color=color.red)  // 在圖表上標註新的賣空信號
+        label.new(bar_index, high, "Short " + str.tostring(currentOrders) , style=label.style_label_down, color=color.red)  // 在圖表上標註新的賣空信號
+        strategy.entry("sell", strategy.short)
+        log.info("{0},{1}",currentOrders,avgEntryPrice)
+        array.push(avgEntryPrices, close)  // 新的進場價格加入數組
+        currentOrders := currentOrders + 1  // 增加持倉數量
+
+// 平倉條件：當當前價格低於進場價格的指定比例時，觸發平倉
+if currentOrders > 0
+    if close < avgEntryPrice * (1 - PF)  // 當價格下跌達到預設的盈利比例時平倉
+        //label.new(bar_index, low, "Cover " + str.tostring(currentOrders)+str.tostring(avgEntryPrices), style=label.style_label_up, color=color.green)  // 在圖表上標註平倉信號
+        label.new(bar_index, low, "Cover " + str.tostring(currentOrders), style=label.style_label_up, color=color.green)  // 在圖表上標註平倉信號
+        log.info("{0},{1}",currentOrders,avgEntryPrice)
+        strategy.entry("buy", strategy.long)
+        //array.remove(avgEntryPrices, 0)  // 從數組中移除對應的進場價格
+        array.remove(avgEntryPrices, -1)  // 從數組中移除對應的進場價格
+        currentOrders := currentOrders - 1  // 減少持倉數量
