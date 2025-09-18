@@ -3,19 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>鞅法黑科技有限公司｜王裕舜博士</title>
-  <meta name="description" content="Jacky Wang（王裕舜博士）個人簡歷與出版資訊。此頁根據 LinkedIn 公開可見資訊整理，便於於 GitHub Pages 部署。" />
+  <title>王裕舜博士（Yu‑Shun Wang, Ph.D.）｜Home・Publications・Awards & Honors</title>
+  <meta name="description" content="王裕舜（Yu‑Shun Wang）學經歷、出版論文與得獎與社團紀錄。單檔 HTML，適用於 GitHub Pages 靜態部署。" />
   <meta name="robots" content="index,follow" />
+  <meta property="og:title" content="王裕舜（Yu‑Shun Wang）" />
+  <meta property="og:description" content="Home・Publications・Awards & Honors" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="zh_TW" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.85em' font-size='78'>🎓</text></svg>">
   <style>
     :root{
       --bg:#0b1220; --panel:#0f172a; --card:#0b1220; --text:#e5e7eb; --muted:#94a3b8;
       --brand:#38bdf8; --accent:#22c55e; --border:#1e293b; --link:#7dd3fc;
     }
     *{ box-sizing: border-box; }
-    html,body{ height:100%; }
+    html,body{ height:100%; scroll-behavior:smooth; }
     body{
       margin:0; font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
       "Noto Sans TC","PingFang TC","Microsoft JhengHei", Arial, sans-serif;
@@ -28,24 +30,23 @@
     a{ color:var(--link); text-decoration:none; }
     a:hover{ text-decoration:underline; }
     header{
-      position: sticky; top:0; z-index:10; background:rgba(11,18,32,.8);
+      position: sticky; top:0; z-index:10; background:rgba(11,18,32,.82);
       backdrop-filter: blur(8px); border-bottom:1px solid var(--border);
     }
-    .wrap{ max-width: 1024px; margin: 0 auto; padding: 0 20px; }
+    .wrap{ max-width: 1060px; margin: 0 auto; padding: 0 20px; }
     .nav{ display:flex; align-items:center; justify-content:space-between; padding:14px 0; }
-    .brand{ display:flex; align-items:center; gap:12px; }
+    .brand{ display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.3px; }
     .brand .logo{ font-size:22px; }
-    .brand div{ font-weight:700; letter-spacing:.3px; }
     .menu a{ margin-left:16px; color:#e2e8f0; opacity:.95; font-weight:600; }
-    .hero{ padding:60px 0 24px; border-bottom:1px solid var(--border); }
-    .hero h1{ margin:0 0 8px; font-size: clamp(26px, 4vw, 42px); line-height:1.15; letter-spacing:.4px; }
-    .hero .sub{ color:var(--muted); max-width:760px; margin:8px 0 0; }
+    .hero{ padding:64px 0 26px; border-bottom:1px solid var(--border); }
+    .hero h1{ margin:0 0 8px; font-size: clamp(26px, 4vw, 42px); line-height:1.12; letter-spacing:.4px; }
+    .hero .sub{ color:var(--muted); max-width:820px; margin:8px 0 0; }
     .badge{
       display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px;
       border:1px solid rgba(125,211,252,.25); background:rgba(56,189,248,.10); color:#e0f2fe;
       font-weight:800; letter-spacing:.3px; text-transform:uppercase; font-size:12px;
     }
-    main section{ padding:40px 0; }
+    main section{ padding:44px 0; }
     h2{ margin:0 0 16px; font-size: clamp(20px, 3vw, 28px); letter-spacing:.3px; }
     h3{ margin:0 0 10px; font-size:18px; color:#c7d2fe; }
     .grid{ display:grid; gap:16px; }
@@ -57,7 +58,7 @@
     }
     .table{ width:100%; border-collapse: collapse; margin-top:6px; }
     .table th, .table td{ padding:10px 12px; border-bottom:1px dashed var(--border); text-align:left; vertical-align:top; }
-    .table th{ width:160px; color:#bae6fd; font-weight:700; }
+    .table th{ width:180px; color:#bae6fd; font-weight:700; }
     ul{ margin:8px 0 0; padding-left:18px; }
     li{ margin:6px 0; }
     .pill{ display:inline-block; padding:6px 10px; border:1px solid var(--border); border-radius:999px; margin:4px 6px 0 0; color:#cbd5e1; background:rgba(148,163,184,.06); }
@@ -70,139 +71,172 @@
     .note{ color:var(--muted); font-size:13px; margin-top:12px; }
     footer{ border-top:1px solid var(--border); color:var(--muted); padding:28px 0 60px; }
     .kicker{ color:#93c5fd; font-weight:800; letter-spacing:.5px; font-size:12px; text-transform:uppercase; }
+    .en{ color:#e2e8f0; opacity:.95; }
   </style>
 </head>
 <body>
   <header>
     <div class="wrap nav">
       <div class="brand">
-        <div class="logo">🧠</div>
-        <div>Jacky Wang｜王裕舜博士</div>
+        <div class="logo">🎓</div>
+        <div>Yu‑Shun Wang, Ph.D.</div>
       </div>
       <nav class="menu">
-        <a href="#about">關於</a>
-        <a href="#links">連結</a>
-        <a href="#experience">經歷</a>
-        <a href="#publications">出版</a>
-        <a href="#contact">聯絡</a>
+        <a href="#home">Home</a>
+        <a href="#publications">Publications</a>
+        <a href="#awards">Awards & Honors</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <div class="wrap hero">
-    <span class="badge">Professional profile</span>
-    <h1>Jacky Wang（王裕舜博士）</h1>
-    <p class="sub">此頁面彙整 Jacky 的專業簡介、公開出版與重要連結，供快速瀏覽與聯絡使用。內容整理自 LinkedIn 公開可見資訊與一般個人名片格式。</p>
+  <div class="wrap hero" id="home">
+    <span class="badge">Academic profile</span>
+    <h1>王裕舜（Yu‑Shun Wang, Ph.D.）</h1>
   </div>
 
   <main class="wrap">
-    <section id="about">
-      <h2>關於</h2>
+    <section aria-labelledby="about-title">
+      <h2 id="about-title">Home</h2>
       <div class="grid grid-2">
         <div class="card">
-          <div class="kicker">簡介</div>
-          <p>專注於高科技與研發環境的產品開發、合作研究與產業應用連結，具跨部門協作、專案管理與技術溝通經驗。具國際合作與學研轉譯背景，關注從研究成果到實際落地的價值實現。</p>
-          <div class="cta">
-            <span class="pill">研發合作</span>
-            <span class="pill">半導體與光電</span>
-            <span class="pill">技術轉移</span>
-            <span class="pill">專案管理</span>
-          </div>
-        </div>
-        <div class="card">
-          <div class="kicker">快速資訊</div>
+          <div class="kicker">Profile</div>
           <table class="table">
             <tr>
-              <th>姓名</th>
-              <td>王裕舜博士（Jacky Wang）</td>
+              <th>中文姓名</th>
+              <td>王裕舜</td>
             </tr>
             <tr>
-              <th>公開平台</th>
-              <td><a href="https://www.linkedin.com/in/jackywang1980" target="_blank" rel="noopener">LinkedIn 個人頁</a></td>
+              <th>英文姓名</th>
+              <td class="en">Yu‑Shun Wang</td>
             </tr>
             <tr>
-              <th>目前領域</th>
-              <td>科技研發、產學合作、光電與CMOS光子學等相關主題</td>
+              <th>學位</th>
+              <td>Ph.D.</td>
+            </tr>
+            <tr>
+              <th>E-mail</th>
+              <td><a href="mailto:prof@weishun.cc">prof@weishun.cc</a></td>
+            </tr>
+            <tr>
+              <th>LinkedIn</th>
+              <td><a href="https://www.linkedin.com/in/jackywang1980/" target="_blank" rel="noopener">linkedin.com/in/jackywang1980</a></td>
+            </tr>
+            <tr>
+              <th>Facebook</th>
+              <td><a href="https://www.facebook.com/yushun.wang1" target="_blank" rel="noopener">facebook.com/yushun.wang1</a></td>
             </tr>
           </table>
-          <p class="note">以上為名片式整理，細節以當事人提供或公開資訊為準。</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="links">
-      <h2>連結</h2>
-      <div class="grid grid-3">
-        <div class="card">
-          <h3>LinkedIn</h3>
-          <p>追蹤最新動態、經歷與社群互動。</p>
-          <a class="btn" href="https://www.linkedin.com/in/jackywang1980" target="_blank" rel="noopener">🔗 前往 LinkedIn</a>
+          <p class="note">© Yu‑Shun Wang, 2019 NTU. All rights reserved.</p>
         </div>
         <div class="card">
-          <h3>A*STAR</h3>
-          <p>新加坡科學與工程研究局（Agency for Science, Technology and Research）。</p>
-          <a class="btn alt" href="https://www.a-star.edu.sg" target="_blank" rel="noopener">🏛 官方網站</a>
-        </div>
-        <div class="card">
-          <h3>學術檢索</h3>
-          <p>檢索相關期刊與會議論文。</p>
-          <a class="btn" href="https://scholar.google.com/" target="_blank" rel="noopener">📚 Google Scholar</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience">
-      <h2>經歷摘要</h2>
-      <div class="grid grid-2">
-        <div class="card">
-          <h3>研發與產學合作</h3>
+          <div class="kicker">Education</div>
           <ul>
-            <li>參與高科技領域專案，推動研究成果與產業連結與驗證。</li>
-            <li>跨單位協作，整合工程、產品與研究團隊目標。</li>
-            <li>支持技術轉移、產業應用與共同開發框架建立。</li>
+            <li><strong>1998 Sept. – 2002 June:</strong> B.S., National Central University (EE)</li>
+            <li><strong>2002 Sept. – 2005 June:</strong> M.S., National Taiwan University (GIEE)</li>
+            <li><strong>2006 Sept. – 2012 June:</strong> Ph.D., National Taiwan University (GIEE)</li>
           </ul>
-        </div>
-        <div class="card">
-          <h3>技術關注主題</h3>
-          <ul>
-            <li>CMOS 光子學與接收器設計的實務應用。</li>
-            <li>半導體與光電系統整合與封裝相關議題。</li>
-            <li>高動態範圍、靈敏度與雜訊表現的權衡。</li>
-          </ul>
-        </div>
-      </div>
-      <p class="note">詳細職稱與任期等細節可於 LinkedIn 登入後查看。</p>
-    </section>
-
-    <section id="publications">
-      <h2>出版與發表</h2>
-      <div class="card">
-        <h3>期刊與會議</h3>
-        <ul>
-          <li>
-            <strong>Enhanced dynamic range CMOS photonics receiver with an adaptively-biased Ge photodiode for LR applications.</strong>
-            Wang, Yu-Shun; M. Kumarasamy Raja; Tsung-Yang Liow; Vishal V. Kulkarni; Bi Xiaojun; Do-Won Kim; Andy Eu-Jin Lim; Muthukumaraswamy Annamalai Arasu; Guo-Qiang Lo.
-            IEEE TENCON 2016, pp. 3593–3596。
-            <a href="https://ieeexplore.ieee.org/document/7848727" target="_blank" rel="noopener">原文連結</a>
-          </li>
-        </ul>
-        <p class="note">此條目源自 LinkedIn 公開頁面之出版資訊，連結指向 IEEE Xplore。</p>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>聯絡</h2>
-      <div class="grid grid-2">
-        <div class="card">
-          <h3>與我聯繫</h3>
-          <p>若需合作洽詢、針對研究與技術主題交流，或取得最新履歷，歡迎透過 LinkedIn 專頁發訊。</p>
           <div class="cta">
-            <a class="btn" href="https://www.linkedin.com/in/jackywang1980" target="_blank" rel="noopener">💬 透過 LinkedIn 聯繫</a>
+            <span class="pill">EE</span>
+            <span class="pill">GIEE</span>
+            <span class="pill">NTU</span>
+            <span class="pill">NCU</span>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="publications" aria-labelledby="pubs-title">
+      <h2 id="pubs-title">Publications</h2>
+      <div class="card">
+        <h3>Peer‑reviewed papers</h3>
+        <ul>
+          <li>
+            <strong>Wang, Yu‑Shun</strong>; M. Kumarasamy Raja; Tsung‑Yang Liow; Vishal V. Kulkarni; Bi Xiaojun; Do‑Won Kim; Andy Eu‑Jin Lim; Muthukumaraswamy Annamalai Arasu; Guo‑Qiang Lo.
+            <em>Enhanced dynamic range CMOS photonics receiver with an adaptively-biased Ge photodiode for LR applications.</em>
+            In IEEE Region 10 Conference (TENCON) 2016, pp. 3593–3596.
+          </li>
+          <li>
+            <strong>Kulkarni, Vishal Vinayak</strong>; Wei Yi Lim; Bin Zhao; Dan Lei Yan; <strong>Yu‑Shun Wang</strong>; Jun Zhou; Muthukumaraswamy Annamalai Arasu.
+            <em>A 5.1 Gb/s 60.3 fJ/bit/mm PVT tolerant NoC transceiver.</em>
+            In IEEE Asian Solid‑State Circuits Conference (A‑SSCC) 2016, pp. 141–144.
+          </li>
+          <li>
+            <strong>Hsieh, Min‑Han</strong>; Bing‑Feng Lin; <strong>Yu‑Shun Wang</strong>; Hao‑Huei Chang; Charlie Chung‑Ping Chen.
+            <em>A 2–8 GHz multi‑phase distributed DLL using phase insertion in 90 nm.</em>
+            In IEEE International Symposium on Circuits and Systems (ISCAS) 2012, pp. 2015–2018.
+          </li>
+          <li>
+            <strong>Wang, Y.‑S.</strong>; M.‑H. Hsieh; J. C.‑M. Li; C. C.‑P. Chen.
+            <em>An At‑speed Test Technique for High‑speed High‑order Adder by a 6.4‑GHz 64‑bit Domino Adder Example.</em>
+            IEEE Transactions on Circuits and Systems I: Regular Papers, vol. 59, pp. 1644–1655, Aug. 2012.
+          </li>
+          <li>
+            <strong>Wang, Y.‑S.</strong>; M.‑H. Hsieh; C.‑M. Liu; C.‑W. Liu; J. C.‑M. Li; C. C.‑P. Chen.
+            <em>An at‑speed self‑testable technique for the high speed domino adder.</em>
+            In Proc. IEEE Custom Integrated Circuits Conference (CICC), pp. 1–4, Sept. 2011.
+          </li>
+          <li>
+            <strong>Wang, Y.‑S.</strong>; M.‑H. Hsieh; C.‑M. Liu; Y.‑C. Wu; B.‑F. Lin; H.‑C. Chiu; C. C.‑P. Chen.
+            <em>A 1.2V 6.4GHz 181ps 64‑bit CD domino adder with DLL measurement technique.</em>
+            In Proc. IEEE Int. Symposium on Circuits and Systems (ISCAS), pp. 1423–1426, May 2011.
+          </li>
+          <li>
+            <strong>Wang, Y.‑S.</strong>; M.‑H. Hsieh; Y.‑C. Wu; C.‑M. Liu; H.‑C. Chiu; B.‑F. Lin; C. C.‑P. Chen.
+            <em>A 12 Gb/s chip‑to‑chip AC coupled transceiver.</em>
+            In Proc. IEEE Int. Symposium on Circuits and Systems (ISCAS), pp. 1692–1695, May 2011.
+          </li>
+          <li>
+            <strong>Wang, Y.‑S.</strong>; L.‑H. Lu.
+            <em>5.7 GHz low‑power variable‑gain LNA in 0.18 μm CMOS.</em>
+            IEE Electronics Letters, Vol. 41, No. 2, pp. 66–68, Jan. 2005.
+          </li>
+          <li>
+            <strong>Lu, L.‑H.</strong>; H.‑H. Hsieh; <strong>Wang, Y.‑S.</strong>
+            <em>A Compact 2.4/5.2‑GHz CMOS Dual‑Band Low‑Noise Amplifier.</em>
+            IEEE Microwave and Wireless Components Letters (MWCL), Vol. 15, No. 10, pp. 685–687, Oct. 2005.
+          </li>
+        </ul>
+        <p class="note">Patent: （如需補充專利清單，可於此區塊新增條目）</p>
+        <p class="note">© Yu‑Shun Wang, 2012 NTU. All rights reserved · © Yu‑Shun Wang, 2019 NTU. All rights reserved</p>
+      </div>
+    </section>
+
+    <section id="awards" aria-labelledby="awards-title">
+      <h2 id="awards-title">Awards & Honors</h2>
+      <div class="grid grid-2">
         <div class="card">
-          <h3>補充說明</h3>
-          <p class="note">本頁不蒐集個資，亦不展示非公開內容。若有新增或更正，請提供最新版資訊以便更新。</p>
+          <h3>跆拳道</h3>
+          <ul>
+            <li><strong>1998/09 – 2001/06:</strong> 中央大學跆拳道代表隊 隊長</li>
+            <li><strong>1999:</strong> 全國大專杯跆拳道錦標賽 銅牌</li>
+            <li><strong>2000:</strong> 四中五校跆拳道錦標賽 銀牌</li>
+            <li><strong>2001:</strong> 輔大盃跆拳道錦標賽 銅牌</li>
+            <li><strong>2001:</strong> 中原盃跆拳道錦標賽 黑帶組 銀牌</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>社團與服務</h3>
+          <ul>
+            <li><strong>1998/09 – 2002/06:</strong> 中央大學 569啦啦社 社員</li>
+            <li><strong>1998/09 – 2002/06:</strong> 台北市中國青年救國團 第31期 假期活動服務員</li>
+            <li><strong>1999/09 – 2002/06:</strong> 台北市中國青年旅行社 特約領隊</li>
+            <li><strong>1999/09 – 2003/06:</strong> 桃園縣中國青年旅行社 特約領隊</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Get in touch</h3>
+          <p>如需合作洽詢、研究交流或取得完整履歷，歡迎透過以下方式聯絡。</p>
+          <div class="cta">
+            <a class="btn" href="mailto:prof@weishun.cc">📧 Email</a>
+            <a class="btn alt" href="https://www.linkedin.com/in/jackywang1980/" target="_blank" rel="noopener">🔗 LinkedIn</a>
+          </div>
         </div>
       </div>
     </section>
@@ -210,8 +244,7 @@
 
   <footer>
     <div class="wrap">
-      <div>© <span id="y"></span> Jacky Wang · All rights reserved.</div>
-      <div class="note">資料彙整自公開來源，詳細履歷與完整經歷請以 LinkedIn 為準。</div>
+      <div>© <span id="y"></span> Yu‑Shun Wang · All rights reserved.</div>
     </div>
   </footer>
 
