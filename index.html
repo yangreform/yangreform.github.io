@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>鞅法黑科技有限公司｜王博士</title>
+  <meta name="description" content="Jacky Wang（王博士）個人簡歷與出版資訊。此頁根據 LinkedIn 公開可見資訊整理，便於於 GitHub Pages 部署。" />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="zh_TW" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+  <style>
+    :root{
+      --bg:#0b1220; --panel:#0f172a; --card:#0b1220; --text:#e5e7eb; --muted:#94a3b8;
+      --brand:#38bdf8; --accent:#22c55e; --border:#1e293b; --link:#7dd3fc;
+    }
+    *{ box-sizing: border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+      "Noto Sans TC","PingFang TC","Microsoft JhengHei", Arial, sans-serif;
+      color:var(--text); background:
+        radial-gradient(900px 500px at 90% -10%, rgba(56,189,248,.12), transparent 60%),
+        radial-gradient(800px 400px at 10% 10%, rgba(34,197,94,.10), transparent 55%),
+        linear-gradient(180deg, #0a0f1a, #0b1220 40%, #0b1220 100%);
+      line-height:1.75;
+    }
+    a{ color:var(--link); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+    header{
+      position: sticky; top:0; z-index:10; background:rgba(11,18,32,.8);
+      backdrop-filter: blur(8px); border-bottom:1px solid var(--border);
+    }
+    .wrap{ max-width: 1024px; margin: 0 auto; padding: 0 20px; }
+    .nav{ display:flex; align-items:center; justify-content:space-between; padding:14px 0; }
+    .brand{ display:flex; align-items:center; gap:12px; }
+    .brand .logo{ font-size:22px; }
+    .brand div{ font-weight:700; letter-spacing:.3px; }
+    .menu a{ margin-left:16px; color:#e2e8f0; opacity:.95; font-weight:600; }
+    .hero{ padding:60px 0 24px; border-bottom:1px solid var(--border); }
+    .hero h1{ margin:0 0 8px; font-size: clamp(26px, 4vw, 42px); line-height:1.15; letter-spacing:.4px; }
+    .hero .sub{ color:var(--muted); max-width:760px; margin:8px 0 0; }
+    .badge{
+      display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px;
+      border:1px solid rgba(125,211,252,.25); background:rgba(56,189,248,.10); color:#e0f2fe;
+      font-weight:800; letter-spacing:.3px; text-transform:uppercase; font-size:12px;
+    }
+    main section{ padding:40px 0; }
+    h2{ margin:0 0 16px; font-size: clamp(20px, 3vw, 28px); letter-spacing:.3px; }
+    h3{ margin:0 0 10px; font-size:18px; color:#c7d2fe; }
+    .grid{ display:grid; gap:16px; }
+    @media (min-width: 800px){ .grid-2{ grid-template-columns: 1fr 1fr; } .grid-3{ grid-template-columns: repeat(3,1fr); } }
+    .card{
+      background: linear-gradient(180deg, rgba(11,18,32,.6), rgba(11,18,32,.95));
+      border:1px solid var(--border); border-radius:14px; padding:18px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.25);
+    }
+    .table{ width:100%; border-collapse: collapse; margin-top:6px; }
+    .table th, .table td{ padding:10px 12px; border-bottom:1px dashed var(--border); text-align:left; vertical-align:top; }
+    .table th{ width:160px; color:#bae6fd; font-weight:700; }
+    ul{ margin:8px 0 0; padding-left:18px; }
+    li{ margin:6px 0; }
+    .pill{ display:inline-block; padding:6px 10px; border:1px solid var(--border); border-radius:999px; margin:4px 6px 0 0; color:#cbd5e1; background:rgba(148,163,184,.06); }
+    .cta{ display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; }
+    .btn{
+      display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:10px; font-weight:800;
+      border:1px solid var(--border); background:rgba(56,189,248,.10); color:#e0f2fe; letter-spacing:.2px;
+    }
+    .btn.alt{ background: rgba(34,197,94,.12); color:#d1fae5; }
+    .note{ color:var(--muted); font-size:13px; margin-top:12px; }
+    footer{ border-top:1px solid var(--border); color:var(--muted); padding:28px 0 60px; }
+    .kicker{ color:#93c5fd; font-weight:800; letter-spacing:.5px; font-size:12px; text-transform:uppercase; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">
+        <div class="logo">🧠</div>
+        <div>Jacky Wang｜王博士</div>
+      </div>
+      <nav class="menu">
+        <a href="#about">關於</a>
+        <a href="#links">連結</a>
+        <a href="#experience">經歷</a>
+        <a href="#publications">出版</a>
+        <a href="#contact">聯絡</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="wrap hero">
+    <span class="badge">Professional profile</span>
+    <h1>Jacky Wang（王博士）</h1>
+    <p class="sub">此頁面彙整 Jacky 的專業簡介、公開出版與重要連結，供快速瀏覽與聯絡使用。內容整理自 LinkedIn 公開可見資訊與一般個人名片格式。</p>
+  </div>
+
+  <main class="wrap">
+    <section id="about">
+      <h2>關於</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <div class="kicker">簡介</div>
+          <p>專注於高科技與研發環境的產品開發、合作研究與產業應用連結，具跨部門協作、專案管理與技術溝通經驗。具國際合作與學研轉譯背景，關注從研究成果到實際落地的價值實現。</p>
+          <div class="cta">
+            <span class="pill">研發合作</span>
+            <span class="pill">半導體與光電</span>
+            <span class="pill">技術轉移</span>
+            <span class="pill">專案管理</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="kicker">快速資訊</div>
+          <table class="table">
+            <tr>
+              <th>姓名</th>
+              <td>王博士（Jacky Wang）</td>
+            </tr>
+            <tr>
+              <th>公開平台</th>
+              <td><a href="https://www.linkedin.com/in/jackywang1980" target="_blank" rel="noopener">LinkedIn 個人頁</a></td>
+            </tr>
+            <tr>
+              <th>目前領域</th>
+              <td>科技研發、產學合作、光電與CMOS光子學等相關主題</td>
+            </tr>
+          </table>
+          <p class="note">以上為名片式整理，細節以當事人提供或公開資訊為準。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="links">
+      <h2>連結</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>LinkedIn</h3>
+          <p>追蹤最新動態、經歷與社群互動。</p>
+          <a class="btn" href="https://www.linkedin.com/in/jackywang1980" target="_blank" rel="noopener">🔗 前往 LinkedIn</a>
+        </div>
+        <div class="card">
+          <h3>A*STAR</h3>
+          <p>新加坡科學與工程研究局（Agency for Science, Technology and Research）。</p>
+          <a class="btn alt" href="https://www.a-star.edu.sg" target="_blank" rel="noopener">🏛 官方網站</a>
+        </div>
+        <div class="card">
+          <h3>學術檢索</h3>
+          <p>檢索相關期刊與會議論文。</p>
+          <a class="btn" href="https://scholar.google.com/" target="_blank" rel="noopener">📚 Google Scholar</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>經歷摘要</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>研發與產學合作</h3>
+          <ul>
+            <li>參與高科技領域專案，推動研究成果與產業連結與驗證。</li>
+            <li>跨單位協作，整合工程、產品與研究團隊目標。</li>
+            <li>支持技術轉移、產業應用與共同開發框架建立。</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>技術關注主題</h3>
+          <ul>
+            <li>CMOS 光子學與接收器設計的實務應用。</li>
+            <li>半導體與光電系統整合與封裝相關議題。</li>
+            <li>高動態範圍、靈敏度與雜訊表現的權衡。</li>
+          </ul>
+        </div>
+      </div>
+      <p class="note">詳細職稱與任期等細節可於 LinkedIn 登入後查看。</p>
+    </section>
+
+    <section id="publications">
+      <h2>出版與發表</h2>
+      <div class="card">
+        <h3>期刊與會議</h3>
+        <ul>
+          <li>
+            <strong>Enhanced dynamic range CMOS photonics receiver with an adaptively-biased Ge photodiode for LR applications.</strong>
+            Wang, Yu-Shun; M. Kumarasamy Raja; Tsung-Yang Liow; Vishal V. Kulkarni; Bi Xiaojun; Do-Won Kim; Andy Eu-Jin Lim; Muthukumaraswamy Annamalai Arasu; Guo-Qiang Lo.
+            IEEE TENCON 2016, pp. 3593–3596。
+            <a href="https://ieeexplore.ieee.org/document/7848727" target="_blank" rel="noopener">原文連結</a>
+          </li>
+        </ul>
+        <p class="note">此條目源自 LinkedIn 公開頁面之出版資訊，連結指向 IEEE Xplore。</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>聯絡</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>與我聯繫</h3>
+          <p>若需合作洽詢、針對研究與技術主題交流，或取得最新履歷，歡迎透過 LinkedIn 專頁發訊。</p>
+          <div class="cta">
+            <a class="btn" href="https://www.linkedin.com/in/jackywang1980" target="_blank" rel="noopener">💬 透過 LinkedIn 聯繫</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>補充說明</h3>
+          <p class="note">本頁不蒐集個資，亦不展示非公開內容。若有新增或更正，請提供最新版資訊以便更新。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>© <span id="y"></span> Jacky Wang · All rights reserved.</div>
+      <div class="note">資料彙整自公開來源，詳細履歷與完整經歷請以 LinkedIn 為準。</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
